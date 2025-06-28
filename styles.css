@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f7f7f7;
+    color: #232946;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: #fff;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #232946;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover {
+    color: #4f8cff;
+}
+
+.centered-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.centered-title span {
+    font-size: 1.5rem;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+.profile-table-section {
+    max-width: 900px;
+    margin: 2rem auto 0 auto;
+}
+
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+
+.profile-table th, .profile-table td {
+    border: 1px solid #d1d6e0;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.profile-table th {
+    background: #e4e7ed;
+}
+
+.profile-table ul {
+    margin: 0;
+    padding-left: 1em;
+}
+
+.profile-details {
+    text-align: center;
+    color: #888;
+}
+
+.reviews-section {
+    max-width: 900px;
+    margin: 2rem auto 0 auto;
+}
+
+.reviews-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.reviews-container blockquote {
+    background: #f7f7f7;
+    border-left: 4px solid #4f8cff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-width: 350px;
+    min-width: 220px;
+    margin: 0;
+}
+
+.reviews-container footer {
+    font-size: 0.95em;
+    color: #555;
+    margin-top: 0.5em;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #fff;
+    color: #232946;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    margin-bottom: 2rem;
+}
+
+.profile-item h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #4f8cff;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.profile-item p, .profile-item ul {
+    margin: 0;
+    color: #232946;
+    font-size: 1rem;
+}
+
+.profile-item ul {
+    padding-left: 1.2em;
+    margin-top: 0.25em;
+}
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .main-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+        align-items: flex-start;
+    }
+    .profile-table-section, .reviews-section {
+        padding: 0 0.5rem;
+    }
+    .profile-table {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .main-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+    .profile-table-section, .reviews-section {
+        padding: 0 0.5rem;
+    }
+    .reviews-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-left h1 {
+        font-size: 1.2rem;
+    }
+    .logo {
+        height: 32px;
+        width: 32px;
+    }
+    .centered-title span {
+        font-size: 1.1rem;
+    }
+    .profile-table th, .profile-table td {
+        padding: 4px;
+        font-size: 0.9em;
+    }
+    .profile-table-section {
+        max-width: 100%;
+        margin: 1rem 0 0 0;
+    }
+    .reviews-section {
+        max-width: 100%;
+        margin: 1rem 0 0 0;
+    }
+    .reviews-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .reviews-container blockquote {
+        max-width: 100%;
+        min-width: 0;
+    }
+}
